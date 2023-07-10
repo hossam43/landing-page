@@ -1,0 +1,213 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <img src="./Img/logo.png" alt="" class="logo__img" />
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
+
+    <main>
+      <header class="main__hero">
+        <div class="hero__section">
+          <div class="hero__content">
+            <h1 class="hero__title">Landing page with dynamic navbar</h1>
+            <p class="hero__des">
+              Dynamically display a section in the HTML, using JavaScript to manipulate the DOM (Document Object Model) based on certain conditions or events.
+              When you run your application, the dynamically displayed section will appear on the page with the content you defined.
+              <br />
+            </p>
+            <div>
+              <button class="call__to__action call_to_action_fill">
+                Hire Me
+              </button>
+              <button class="call__to__action call_to_action_outline">
+                About Me
+              </button>
+            </div>
+            <div class="social-media-icons">
+              <a href="https://www.linkedin.com/in/hossam-ayman-" target="_blank">
+                <i class="fab fa-linkedin" style="color: #9194d7"></i>
+              </a>
+              <a href="https://www.twitter.com/your-profile" target="_blank">
+                <i class="fab fa-twitter-square" style="color: #9194d7"></i>
+              </a>
+              <a href="https://wa.me/201113210972" target="_blank">
+
+                <i class="fab fa-whatsapp-square" style="color: #9194d7"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero__img bounce-animation">
+            <img src="./Img/hero-img1.png" alt="hero-image" />
+          </div>
+          <div class="new__img bounce-animation">
+            <img src="./Img/hero-img.png" alt="new-hero-image" />
+          </div>
+        </div>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="section1" class="your-active-class">
+        <div class="landing__container" id="about-section">
+            <h2>Section 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
+              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
+              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
+              faucibus vitae elit. Integer nec libero venenatis libero ultricies
+              molestie semper in tellus. Sed congue et odio sed euismod.
+            </p>
+
+            <p>
+              Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+              gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+              Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+              consectetur porttitor. Suspendisse imperdiet porttitor tortor,
+              eget elementum tortor mollis non.
+            </p>
+      
+      </section>
+      <section id="section2">
+        <div class="landing__container">
+          <h2>Section 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <section id="section3">
+        <div class="landing__container">
+          <h2>Section 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <section id="section4">
+        <div class="landing__container">
+          <h2>Section 4</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <section id="section5">
+        <div class="landing__container">
+          <h2>Section 5</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <button class="up">Up</button>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

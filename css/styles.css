@@ -1,0 +1,550 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff,
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+      1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+body {
+  font-family: "Merriweather", serif;
+}
+
+/* Navigation style */
+.navbar__menu {
+  margin: 0 8em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Typeography General */
+h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 3em;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.call__to__action {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: none;
+}
+.call_to_action_fill {
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+}
+.call_to_action_outline {
+  background-color: white;
+  border: #654ea3 solid 0.2em;
+  color: #654ea3;
+}
+
+.call_to_action_outline:hover {
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+  color: white;
+}
+
+.call__to__action:hover {
+  background-color: #9194d7;
+  cursor: pointer;
+}
+
+.hero__section {
+  margin: 4em;
+  display: flex;
+}
+
+.hero__content {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 10;
+}
+
+.hero__img {
+  animation: bounce 4s 2;
+  margin-left: -2em;
+  z-index: 1;
+  width: 80%; /* Adjust the width value as needed */
+}
+.new__img {
+  display: none; /* Initially hide the new image */
+  width: 60%; /* Adjust the width value as needed */
+  margin-left: -2em;
+  z-index: 1;
+}
+
+.hero__img:hover {
+  animation: bounce 2s infinite;
+}
+/* Define the animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+i {
+  margin: 0 0.5em;
+  font-size: 2em;
+}
+
+/* Media query */
+@media only screen and (max-width: 1100px) {
+  .hero__img {
+    display: none; /* Hide the default hero__img */
+  }
+
+  .new__img {
+    display: block; /* Show the new image */
+  }
+
+  .new__img:hover {
+    animation: bounce 2s infinite;
+  }
+
+  .hero__title {
+    font-size: 2em;
+  }
+  .hero__des {
+    font-size: 0.8em;
+  }
+  .call__to__action {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    margin: 0.5em 0;
+  }
+  i {
+    margin: 0 0.5em;
+    font-size: 1.5em;
+  }
+}
+
+/* Define the hover animation */
+@keyframes hover-animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+i:hover {
+  animation-name: hover-animation;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* Media queries */
+@media only screen and (min-width: 1350px) and (max-width: 1900px) {
+  .hero__content {
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 1901px) and (max-width: 2200px) {
+  .hero__content {
+    margin-left: 10em;
+  }
+}
+
+@media only screen and (min-width: 2201px) {
+  .hero__content {
+    margin-left: 20em;
+  }
+}
+
+@media only screen and (min-width: 2551px) {
+  .hero__content {
+    margin-left: 30em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero__section {
+    display: block;
+    padding-top: 3em;
+  }
+
+  .hero__title,
+  .hero__des,
+  i,
+  .call__to__action {
+    margin-top: 1em;
+  }
+}
+
+h2 {
+  border-bottom: 1px solid #cc1;
+  font-family: "Oxygen", Sans-Serif;
+  font-size: 3em;
+  color: #fff;
+}
+
+p {
+  line-height: 1.6em;
+  color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+  margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+  min-height: 40vh;
+  padding-top: 3em;
+}
+
+section {
+  position: relative;
+  min-height: 80vh;
+}
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu ul {
+  padding-left: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.navbar__menu li {
+  display: inline-block;
+}
+
+.navbar__menu .menu__link {
+  display: block;
+  padding: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar__menu .menu__link:hover {
+  background: #7964b2;
+  color: #fff;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  transition: ease 0.3s all;
+}
+
+.logo__img {
+  width: 6%;
+
+  margin-right: auto;
+}
+
+/* Header Styles */
+.page__header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  /* background-color: #9ca0d8; */
+}
+
+.page__header.scroll-effect {
+  background-color: #9ca0d8;
+  /* Add any additional styles you want when the scroll position reaches 100hv */
+}
+
+/* Footer Styles */
+.page__footer {
+  background: #9ca0d8;
+  padding: 3em;
+  color: #fff;
+}
+
+.page__footer p {
+  color: #fff;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+  padding: 1em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+  .landing__container {
+    max-width: 50em;
+    padding: 4em;
+  }
+}
+
+section:nth-of-type(even) .landing__container {
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.187);
+  position: absolute;
+  z-index: -5;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 20vw;
+  bottom: -5em;
+  z-index: -5;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.your-active-class {
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+
+  border-radius: 10px;
+}
+
+section.your-active-class .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/*ACTIVE THE A TAGE LINK*/
+.navbar__menu .highlighted {
+  background: #7964b2;
+  /* margin: 1em 0; */
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.109);
+  color: rgb(255, 255, 255);
+  transition: ease 0.3s all;
+}
+
+/*Scroll to Top*/
+
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: -100px;
+  background: #7763b0;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.up.show {
+  right: 20px;
+}
+
+.up:hover {
+  background: rgb(255, 255, 255);
+  color: #7964b2;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
