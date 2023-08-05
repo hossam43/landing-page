@@ -1,121 +1,20 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
-
-/* ---- Base Rules ---- */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
 
-@keyframes mulShdSpin {
-  0%,
-  100% {
-    box-shadow: 0em -2.6em 0em 0em #ffffff,
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
-  }
-  12.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
-      1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
-  }
-  25% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  37.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff,
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff,
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  62.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  75% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff,
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  87.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
-  }
-}
-
 body {
-  font-family: "Merriweather", serif;
+  font-family: Merriweather, serif;
 }
 
-/* Navigation style */
 .navbar__menu {
-  margin: 0 8em;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-}
-
-/* Typeography General */
-h1 {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 3em;
-}
-
-h1,
-p {
-  margin: 0;
+  margin: 1em;
 }
 
 .call__to__action {
@@ -126,28 +25,32 @@ p {
   border-radius: 2em;
   border: none;
 }
+
 .call_to_action_fill {
-  background: linear-gradient(to right, #654ea3, #eaafc8);
+  background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
 }
+
 .call_to_action_outline {
   background-color: white;
-  border: #654ea3 solid 0.2em;
-  color: #654ea3;
+  border: 0.2em solid rgb(101, 78, 163);
+  color: rgb(101, 78, 163);
 }
 
 .call_to_action_outline:hover {
-  background: linear-gradient(to right, #654ea3, #eaafc8);
+  background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
   color: white;
 }
 
 .call__to__action:hover {
-  background-color: #9194d7;
+  background-color: rgb(145, 148, 215);
   cursor: pointer;
 }
 
 .hero__section {
-  margin: 4em;
+  margin: 1em;
   display: flex;
+  justify-content: space-around;
+  align-content: center;
 }
 
 .hero__content {
@@ -158,77 +61,176 @@ p {
   z-index: 10;
 }
 
-.hero__img {
-  animation: bounce 4s 2;
-  margin-left: -2em;
-  z-index: 1;
-  width: 80%; /* Adjust the width value as needed */
+h1 {
+  font-size: 4.5rem;
 }
+.hero__img {
+  animation: 4s ease 0s 2 normal none running bounce;
+}
+
 .new__img {
-  display: none; /* Initially hide the new image */
-  width: 60%; /* Adjust the width value as needed */
-  margin-left: -2em;
-  z-index: 1;
+  display: none;
+}
+
+.mobile__img {
+  display: none;
 }
 
 .hero__img:hover {
-  animation: bounce 2s infinite;
+  animation: 2s ease 0s infinite normal none running bounce;
 }
-/* Define the animation */
+
+.social-media-icons {
+  display: flex;
+  justify-content: start;
+}
+
+.social-media-icons a {
+  margin: 1em 1em;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgb(236, 229, 229);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Your Preferred Font", sans-serif;
+  hyphens: auto;
+  widows: 2;
+  orphans: 2;
+}
+
+#section4 {
+  display: flex;
+  flex-direction: column;
+  place-content: center space-around;
+}
+
+h2 {
+  border-bottom: 1px solid rgb(204, 204, 17);
+  font-family: Oxygen, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+}
+
+.techs {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.techs li {
+  margin-top: 1em;
+}
+
+.contact-btn {
+  width: 22%;
+  margin: 0.5em auto;
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: rgb(173, 207, 255) 0px -12px 6px inset;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  outline: none;
+  padding: 1.5rem 1.8rem;
+  text-align: center;
+  transition: all 0.15s ease 0s;
+  touch-action: manipulation;
+}
+
+.contact-btn:hover {
+  background-color: rgb(128, 77, 238);
+  box-shadow: rgb(24 31 131) 0px -6px 8px inset;
+  transform: scale(1.125);
+  color: white;
+}
+
+.contact-btn:active {
+  transform: scale(1.025);
+}
+
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-15px);
   }
+
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
 i {
-  margin: 0 0.5em;
+  margin: 0px 0.5em;
   font-size: 2em;
 }
 
-/* Media query */
 @media only screen and (max-width: 1100px) {
+  .navbar__menu {
+    flex-direction: column;
+  }
+
+  .logo__img {
+    margin: 0px auto;
+    width: 10% !important;
+  }
+
   .hero__img {
-    display: none; /* Hide the default hero__img */
+    display: none;
   }
 
   .new__img {
-    display: block; /* Show the new image */
+    display: block;
   }
 
   .new__img:hover {
-    animation: bounce 2s infinite;
+    animation: 2s ease 0s infinite normal none running bounce;
   }
 
   .hero__title {
     font-size: 2em;
   }
+
   .hero__des {
     font-size: 0.8em;
   }
+
   .call__to__action {
     padding: 0.5em 1em;
     font-size: 0.8em;
-    margin: 0.5em 0;
+    margin: 0.5em 0px;
   }
+
   i {
-    margin: 0 0.5em;
+    margin: 0px 0.5em;
     font-size: 1.5em;
+  }
+
+  section {
+    flex-direction: column;
   }
 }
 
-/* Define the hover animation */
 @keyframes hover-animation {
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
+
+  100% {
     transform: scale(1.5);
   }
 }
@@ -245,60 +247,67 @@ a {
   outline: none;
 }
 
-/* Media queries */
-@media only screen and (min-width: 1350px) and (max-width: 1900px) {
-  .hero__content {
-    margin-left: 1em;
-  }
-}
-
-@media only screen and (min-width: 1901px) and (max-width: 2200px) {
-  .hero__content {
-    margin-left: 10em;
-  }
-}
-
-@media only screen and (min-width: 2201px) {
-  .hero__content {
-    margin-left: 20em;
-  }
-}
-
 @media only screen and (min-width: 2551px) {
   .hero__content {
     margin-left: 30em;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .hero__section {
+@media only screen and (max-width: 750px) {
+  .burger-nav {
     display: block;
-    padding-top: 3em;
+    background: url("../Img/ham-i.png");
+    width: 100px;
+    height: 50px;
+  }
+
+  .new__img {
+    display: none;
+  }
+
+  .mobile__img {
+    margin: 0px auto;
+    display: block !important;
+  }
+
+  .mobile__img:hover {
+    animation: 2s ease 0s infinite normal none running bounce;
+  }
+
+  .hero__section {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 1em 0px;
   }
 
   .hero__title,
   .hero__des,
   i,
   .call__to__action {
-    margin-top: 1em;
+    margin: 0.5em 0px;
+  }
+
+  .call-to-action {
+    display: flex;
+    place-content: center space-around;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .contact-btn {
+    width: 30%;
+  }
+
+  .social-media-icons {
+    justify-content: space-evenly;
   }
 }
 
-h2 {
-  border-bottom: 1px solid #cc1;
-  font-family: "Oxygen", Sans-Serif;
-  font-size: 3em;
-  color: #fff;
-}
-
-p {
-  line-height: 1.6em;
-  color: #eee;
-}
-
-/* ---- Layout Rules ---- */
 main {
-  margin: 10vh 1em 10vh;
+  margin: 18vh 1em 10vh;
 }
 
 .main-hero {
@@ -309,106 +318,111 @@ main {
 section {
   position: relative;
   min-height: 80vh;
+  margin: 1em;
 }
 
-/* ---- Module Rules ---- */
-
-/* Navigation Styles*/
 .navbar__menu ul {
-  padding-left: 0;
-  margin: 0;
+  padding-left: 0px;
+  margin: 0px;
   text-align: right;
 }
 
 .navbar__menu li {
   display: inline-block;
+  margin: 1em;
 }
 
 .navbar__menu .menu__link {
-  display: block;
-  padding: 1.5em;
   font-weight: bold;
   text-decoration: none;
   color: white;
 }
 
 .navbar__menu .menu__link:hover {
-  background: #7964b2;
-  color: #fff;
+  background: rgb(121, 100, 178);
+  color: rgb(255, 255, 255);
   border-radius: 0.5em;
   padding: 1em 2em;
-  transition: ease 0.3s all;
+  transition: all 0.3s ease 0s;
 }
 
 .logo__img {
   width: 6%;
-
   margin-right: auto;
 }
 
-/* Header Styles */
 .page__header {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
   z-index: 5;
-  /* background-color: #9ca0d8; */
 }
 
 .page__header.scroll-effect {
-  background-color: #9ca0d8;
-  /* Add any additional styles you want when the scroll position reaches 100hv */
+  background-color: rgb(156, 160, 216);
 }
 
-/* Footer Styles */
-.page__footer {
-  background: #9ca0d8;
-  padding: 3em;
-  color: #fff;
-}
-
-.page__footer p {
-  color: #fff;
-}
-
-/* ---- Theme Rules ---- */
-/* Landing Container Styles */
 .landing__container {
   padding: 1em;
   text-align: left;
 }
 
+.f-s-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.page__footer {
+  background: rgb(156, 160, 216);
+  padding: 3em;
+  color: rgb(255, 255, 255);
+}
+
 @media only screen and (min-width: 35em) {
   .landing__container {
-    max-width: 50em;
-    padding: 4em;
+    width: 100%;
+    padding: 2em;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
-section:nth-of-type(even) .landing__container {
-  margin-right: 0;
+@media only screen and (max-width: 560px) {
+  .f-s-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    padding: 0.4rem 5rem;
+    width: 80%;
+  }
+}
+
+section:nth-of-type(2n) .landing__container {
+  margin-right: 0px;
   margin-left: auto;
   text-align: right;
 }
 
-/* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
-section:nth-of-type(odd) .landing__container::before {
+section:nth-of-type(2n + 1) .landing__container::before {
   content: "";
-  background: rgba(255, 255, 255, 0.187);
+  background: rgba(255, 255, 255, 0.19);
   position: absolute;
   z-index: -5;
   width: 20vh;
   height: 20vh;
   border-radius: 50%;
   opacity: 0;
-  transition: ease 0.5s all;
+  transition: all 0.5s ease 0s;
 }
 
-section:nth-of-type(even) .landing__container::before {
+section:nth-of-type(2n) .landing__container::before {
   content: "";
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.1) 0%,
@@ -422,31 +436,29 @@ section:nth-of-type(even) .landing__container::before {
   height: 10vh;
   border-radius: 50%;
   opacity: 0;
-  transition: ease 0.5s all;
+  transition: all 0.5s ease 0s;
 }
 
 section:nth-of-type(3n) .landing__container::after {
   content: "";
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.2) 100%
   );
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 0px;
+  bottom: 0px;
   z-index: -5;
   width: 10vh;
   height: 10vh;
   border-radius: 50%;
   opacity: 0;
-  transition: ease 0.5s all;
+  transition: all 0.5s ease 0s;
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
   content: "";
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.1) 0%,
@@ -460,46 +472,42 @@ section:nth-of-type(3n + 1) .landing__container::after {
   height: 15vh;
   border-radius: 50%;
   opacity: 0;
-  transition: ease 0.5s all;
+  transition: all 0.5s ease 0s;
 }
 
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-
+  background: linear-gradient(
+    -90deg,
+    rgb(128, 77, 238) 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
   border-radius: 10px;
 }
 
 section.your-active-class .landing__container::before {
   opacity: 1;
-  animation: rotate 4s linear 0s infinite forwards;
+  animation: 4s linear 0s infinite normal forwards running rotate;
 }
 
 section.your-active-class .landing__container::after {
   opacity: 1;
-  animation: rotate 5s linear 0s infinite forwards reverse;
+  animation: 5s linear 0s infinite reverse forwards running rotate;
 }
 
-/*ACTIVE THE A TAGE LINK*/
 .navbar__menu .highlighted {
-  background: #7964b2;
-  /* margin: 1em 0; */
+  background: rgb(121, 100, 178);
   border-radius: 0.5em;
   padding: 1em 2em;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.109);
+  box-shadow: rgba(255, 255, 255, 0.11) 0px 0px 10px;
   color: rgb(255, 255, 255);
-  transition: ease 0.3s all;
+  transition: all 0.3s ease 0s;
 }
-
-/*Scroll to Top*/
 
 .up {
   position: fixed;
   bottom: 10px;
   right: -100px;
-  background: #7763b0;
+  background: rgb(119, 99, 176);
   color: white;
   font-weight: bold;
   font-size: 12px;
@@ -515,15 +523,15 @@ section.your-active-class .landing__container::after {
 
 .up:hover {
   background: rgb(255, 255, 255);
-  color: #7964b2;
+  color: rgb(121, 100, 178);
 }
 
-/* Section Active Styles Keyframe Animations */
 @keyframes rotate {
-  from {
+  0% {
     transform: rotate(0deg) translate(-1em) rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg) translate(-1em) rotate(-360deg);
   }
 }
@@ -531,20 +539,22 @@ section.your-active-class .landing__container::after {
 @keyframes shake {
   10%,
   90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0px, 0px);
   }
+
   20%,
   80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0px, 0px);
   }
 
   30%,
   50%,
   70% {
-    transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0px, 0px);
   }
+
   40%,
   60% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0px, 0px);
   }
 }

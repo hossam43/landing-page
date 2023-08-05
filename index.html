@@ -25,6 +25,8 @@
     <header class="page__header">
       <nav class="navbar__menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
+
+        <a href="" class="burger-nav"></a>
         <img src="./Img/logo.png" alt="" class="logo__img" />
         <ul id="navbar__list"></ul>
       </nav>
@@ -36,11 +38,14 @@
           <div class="hero__content">
             <h1 class="hero__title">Landing page with dynamic navbar</h1>
             <p class="hero__des">
-              Dynamically display a section in the HTML, using JavaScript to manipulate the DOM (Document Object Model) based on certain conditions or events.
-              When you run your application, the dynamically displayed section will appear on the page with the content you defined.
+              Dynamically display a section in the HTML, using JavaScript to
+              manipulate the DOM (Document Object Model) based on certain
+              conditions or events. When you run your application, the
+              dynamically displayed section will appear on the page with the
+              content you defined.
               <br />
             </p>
-            <div>
+            <div class="call-to-action">
               <button class="call__to__action call_to_action_fill">
                 Hire Me
               </button>
@@ -49,23 +54,32 @@
               </button>
             </div>
             <div class="social-media-icons">
-              <a href="https://www.linkedin.com/in/hossam-ayman-" target="_blank">
-                <i class="fab fa-linkedin" style="color: #9194d7"></i>
-              </a>
-              <a href="https://www.twitter.com/your-profile" target="_blank">
-                <i class="fab fa-twitter-square" style="color: #9194d7"></i>
+              <a
+                href="https://www.linkedin.com/in/hossam-ayman-"
+                target="_blank"
+              >
+                <!-- <i class="fab fa-linkedin" style="color: #9194d7"></i> -->
+                <img src="./Img/linkedin.png" alt="" />
               </a>
               <a href="https://wa.me/201113210972" target="_blank">
-
-                <i class="fab fa-whatsapp-square" style="color: #9194d7"></i>
+                <!-- <i class="fab fa-whatsapp-square" style="color: #9194d7"></i> -->
+                <img src="./Img/whatsapp.png" alt="" />
+              </a>
+              <a href="https://www.twitter.com/your-profile" target="_blank">
+                <!-- <i class="fab fa-twitter-square" style="color: #9194d7"></i> -->
+                <img src="./Img/twitter.png" alt="" />
               </a>
             </div>
           </div>
+
           <div class="hero__img bounce-animation">
             <img src="./Img/hero-img1.png" alt="hero-image" />
           </div>
           <div class="new__img bounce-animation">
             <img src="./Img/hero-img.png" alt="new-hero-image" />
+          </div>
+          <div class="mobile__img bounce-animation">
+            <img src="./Img/mobile.png" alt="new-hero-image" />
           </div>
         </div>
       </header>
@@ -75,134 +89,80 @@
     The first section is set to active class by default -->
       <section id="section1" class="your-active-class">
         <div class="landing__container" id="about-section">
-            <h2>Section 1</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
-              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
-              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
-              faucibus vitae elit. Integer nec libero venenatis libero ultricies
-              molestie semper in tellus. Sed congue et odio sed euismod.
-            </p>
-
-            <p>
-              Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-              gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-              Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-              consectetur porttitor. Suspendisse imperdiet porttitor tortor,
-              eget elementum tortor mollis non.
-            </p>
-      
+          <h2>Introduction to 3D Illustration</h2>
+          <p>
+            Welcome to my landing page! As a skilled content creator, I
+            specialize in crafting mesmerizing 3D illustrations that breathe
+            life into ideas and concepts. With a creative arsenal consisting of
+            Figma, Photoshop, and Adobe Illustrator, I have the power to bring
+            imagination into reality. Whether it's captivating landscapes,
+            futuristic product renders, or vibrant characters, my 3D
+            illustrations are a testament to the fusion of art and technology.
+          </p>
+        </div>
+        <div class="f-s-img">
+          <img src="Img/3d.jpg" alt="" />
+        </div>
       </section>
       <section id="section2">
+        <div class="f-s-img">
+          <img src="Img/3d-lavender1.jpg" alt="" />
+        </div>
         <div class="landing__container">
-          <h2>Section 2</h2>
+          <h2>An Intricate 3D Character Render</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Unlocking the Power of 3D: With the combination of Figma, Photoshop,
+            and Adobe Illustrator, I embark on a journey of creativity, crafting
+            intricate 3D characters, objects, and environments. Each
+            illustration is meticulously crafted to evoke emotions and tell
+            captivating visual stories. Witness the magic of photorealistic
+            textures, seamless lighting, and immersive compositions that
+            transport viewers to new dimensions.
           </p>
         </div>
       </section>
       <section id="section3">
         <div class="landing__container">
-          <h2>Section 3</h2>
+          <h2>Versatility in 3D Illustration</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
+            From Concept to Reality: With the versatility of my skills and the
+            power of Figma, Photoshop, and Adobe Illustrator, I can cater to a
+            wide array of industries and projects. Visualize your product in its
+            full glory with stunning 3D product renders, create eye-catching
+            marketing materials, or showcase architectural masterpieces with
+            immersive visualizations. The possibilities are limitless, and I'm
+            here to transform ideas into vivid realities.
           </p>
+        </div>
 
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+        <div class="f-s-img">
+          <img src="Img/3d-isometric-style1.jpg" alt="" />
         </div>
       </section>
       <section id="section4">
         <div class="landing__container">
-          <h2>Section 4</h2>
+          <h2>Contact Me to Elevate Your Vision!</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
+            Join me on this exhilarating creative journey, and together, we'll
+            transform concepts into extraordinary 3D illustrations using the
+            enchanting world of Figma, Photoshop, and Adobe Illustrator. With
+            each tool playing a pivotal role, we'll perfect the artistry of your
+            vision, creating visuals that resonate deeply with your audience.
+            Reach out to me today, and let's craft a symphony of imagination and
+            technology that leaves a profound mark on your projects, capturing
+            hearts and inspiring minds with brilliance and artistry.
           </p>
         </div>
-      </section>
-      <section id="section5">
-        <div class="landing__container">
-          <h2>Section 5</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
 
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
-        </div>
+        <ul class="techs">
+          <li><img src="./Img/ps.jpg" alt="" /></li>
+          <li><img src="./Img/ai.jpg" alt="" /></li>
+          <li><img src="./Img/figma-v.png" alt="" /></li>
+        </ul>
+
+        <div class="contact-btn" role="button">Let's Talk</div>
       </section>
+
       <button class="up">Up</button>
     </main>
     <footer class="page__footer">

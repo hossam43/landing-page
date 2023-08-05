@@ -1,34 +1,3 @@
-// /**
-//  *
-//  * Manipulating the DOM exercise.
-//  * Exercise programmatically builds navigation,
-//  * scrolls to anchors from navigation,
-//  * and highlights section in viewport upon scrolling.
-//  *
-//  * Dependencies: None
-//  *
-//  * JS Version: ES2015/ES6
-//  *
-//  * JS Standard: ESlint
-//  *
-//  */
-
-// /**
-//  * Comments should be present at the beginning of each procedure and class.
-//  * Great to have comments before crucial code sections within the procedure.
-//  */
-
-/* 1. select all elment with the class landing__container --> html collectino
-2. conver the htmlcollection into an array 
-3. create an li elemnt in each itteratation 
-4. assign the nav bar into a varable
-5. use h2 tag to be the content of the a tag
-6. use the section id to like the nav with the sections and counter to increment the id
-7. create fragment 
-8. append all a and li elements to the fragment then append it to the ul 
-9. create a smooth scroll using the add eventListener method
-10. add active class to the diffrent sections using the IntersectionObserver API   */
-
 //Easy Console
 function p(print) {
   console.log(print);
