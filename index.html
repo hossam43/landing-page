@@ -22,12 +22,17 @@
   <body>
     <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-    <header class="page__header">
-      <nav class="navbar__menu">
+    <header>
+      <nav>
         <!-- Navigation starts as empty UL that will be populated with JS -->
-
-        <a href="" class="burger-nav"></a>
-        <img src="./Img/logo.png" alt="" class="logo__img" />
+        <div class="icon-logo">
+          <img src="./Img/logo.png" alt="logo" class="logo__img" />
+          <img
+            src="./Img/svg/Hamburger_icon1.svg"
+            alt="menue icon"
+            class="burger_icon"
+          />
+        </div>
         <ul id="navbar__list"></ul>
       </nav>
     </header>
@@ -89,15 +94,22 @@
     The first section is set to active class by default -->
       <section id="section1" class="your-active-class">
         <div class="landing__container" id="about-section">
-          <h2>Introduction to 3D Illustration</h2>
+          <h2>Section Title 1</h2>
           <p>
-            Welcome to my landing page! As a skilled content creator, I
-            specialize in crafting mesmerizing 3D illustrations that breathe
-            life into ideas and concepts. With a creative arsenal consisting of
-            Figma, Photoshop, and Adobe Illustrator, I have the power to bring
-            imagination into reality. Whether it's captivating landscapes,
-            futuristic product renders, or vibrant characters, my 3D
-            illustrations are a testament to the fusion of art and technology.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, a. Ea
+            commodi dicta exercitationem soluta quae maiores, error reiciendis
+            adipisci assumenda voluptatibus officiis quasi nihil aspernatur
+            distinctio officia quibusdam? Cupiditate magni eveniet laborum
+            accusamus ipsum dolores aperiam modi repudiandae. Fugiat beatae
+            laudantium at quod quisquam? Qui, dignissimos autem, laboriosam
+            aperiam atque voluptate iste quidem pariatur tempore, aut aliquam!
+            Illum, error!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta
+            amet, laboriosam quod sit accusamus hic tenetur minima maxime
+            suscipit pariatur.
           </p>
         </div>
         <div class="f-s-img">
@@ -106,10 +118,13 @@
       </section>
       <section id="section2">
         <div class="f-s-img">
-          <img src="Img/3d-lavender1.jpg" alt="" />
+          <img
+            src="Img/bakground.jpg"
+            alt="an image of women created using ai"
+          />
         </div>
         <div class="landing__container">
-          <h2>An Intricate 3D Character Render</h2>
+          <h2>Section Title 2</h2>
           <p>
             Unlocking the Power of 3D: With the combination of Figma, Photoshop,
             and Adobe Illustrator, I embark on a journey of creativity, crafting
@@ -119,11 +134,18 @@
             textures, seamless lighting, and immersive compositions that
             transport viewers to new dimensions.
           </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ad
+            molestias recusandae ratione, natus voluptatem quos quia, neque
+            rerum quisquam, laudantium accusantium itaque. Minus quae ea non rem
+            a possimus!
+          </p>
         </div>
       </section>
       <section id="section3">
         <div class="landing__container">
-          <h2>Versatility in 3D Illustration</h2>
+          <h2>Section Title 3</h2>
           <p>
             From Concept to Reality: With the versatility of my skills and the
             power of Figma, Photoshop, and Adobe Illustrator, I can cater to a
@@ -133,15 +155,24 @@
             immersive visualizations. The possibilities are limitless, and I'm
             here to transform ideas into vivid realities.
           </p>
+          <br />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
+            harum atque sed incidunt pariatur eum nemo sapiente laboriosam alias
+            quo odio fuga tenetur, id magni? Repudiandae reiciendis sed nisi
+            odio.
+          </p>
+          <br />
+          <div class="contact-btn" id="readMore" role="button">Read more</div>
         </div>
 
         <div class="f-s-img">
-          <img src="Img/3d-isometric-style1.jpg" alt="" />
+          <img src="Img/3d-isometric.jpg" alt="" />
         </div>
       </section>
       <section id="section4">
         <div class="landing__container">
-          <h2>Contact Me to Elevate Your Vision!</h2>
+          <h2>Section Title 4</h2>
           <p>
             Join me on this exhilarating creative journey, and together, we'll
             transform concepts into extraordinary 3D illustrations using the
@@ -162,8 +193,6 @@
 
         <div class="contact-btn" role="button">Let's Talk</div>
       </section>
-
-      <button class="up">Up</button>
     </main>
     <footer class="page__footer">
       <p>&copy Udacity</p>

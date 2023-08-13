@@ -62,11 +62,6 @@ const option = {
 
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
-    // p(entry.target.id);
-    // p(entry.boundingClientRect.width);
-
-    // aTag  data-nav = entry.target.id (the value of the section) --> now you are standing on viewPort Section
-    //use the viewed section Attrbuites to select the Element you want to change it's style
     let activeATag = ul.querySelector(`[data-nav=${entry.target.id}]`);
 
     if (entry.isIntersecting) {
@@ -84,28 +79,29 @@ allSections.forEach((element) => {
   observer.observe(element);
 });
 
-//Up button
-let upButton = document.querySelector(".up");
-
-window.onscroll = function () {
-  this.scrollY >= 1000
-    ? upButton.classList.add("show")
-    : upButton.classList.remove("show");
-};
-
-upButton.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
 // Add background to the nav when it scroll down
 
-let header = document.querySelector(".page__header"); // Select the header element
+let navHeader = document.querySelector("nav"); // Select the header element
 
 window.onscroll = function () {
   this.scrollY >= 600
-    ? header.classList.add("scroll-effect")
-    : header.classList.remove("scroll-effect");
+    ? navHeader.classList.add("scroll-effect")
+    : navHeader.classList.remove("scroll-effect");
 };
+
+// hamburger button
+let iconFlag = 0;
+
+let burgerIcon = document.querySelector(".burger_icon");
+burgerIcon.addEventListener("click", () => {
+  if (this.window.innerWidth <= 1100 && iconFlag === 0) {
+    ul.classList.add("show-nav");
+    iconFlag = 1;
+  } else {
+    ul.classList.remove("show-nav");
+    iconFlag = 0;
+  }
+});
+
+// when i click on it add the class and make the falg close equal to open
+// and when i click on it agine do the oppasit of the flag
