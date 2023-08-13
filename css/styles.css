@@ -233,7 +233,7 @@ main {
 
 section {
   position: relative;
-  min-height: 80vh;
+  min-height: 10vh;
   margin: 1em;
 }
 
