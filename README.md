@@ -23,10 +23,9 @@ You only need a bowser to open the HTML file.
 
 ## Description
 
-This is a multi-section landing page. Often times, we added a dynamically navigation menue to list the number of section apperded on the page and to differentiate the section that is is the view port we add some active styling to that section.
+Create an engaging multi-section landing page with dynamic navigation. Enhance user experience by highlighting the active section and implementing smooth scrolling for seamless navigation.
 
-To improve the user experience, the section actively being viewed should be differentiated in some way.
-Additionally, when a user clicks on a navigation item, the item scroll the user to the appropriate section.
+![project Image](./Img/final.jpg)
 
 ## Project stages
 
